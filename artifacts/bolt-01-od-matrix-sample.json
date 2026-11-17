@@ -1,0 +1,296 @@
+{
+  "generated_at": "2026-11-17T00:49:28.579Z",
+  "shops_count": 12,
+  "drivers_count": 8,
+  "rate_cards_count": 1,
+  "matrix_stats": [
+    {
+      "route_type": "toll",
+      "total_rows": 144,
+      "nonzero_interbranch_rows": 132,
+      "zero_interbranch_rows": 0,
+      "min_interbranch_km": 3.21,
+      "max_km": 74.33
+    },
+    {
+      "route_type": "nontoll",
+      "total_rows": 144,
+      "nonzero_interbranch_rows": 132,
+      "zero_interbranch_rows": 0,
+      "min_interbranch_km": 3.21,
+      "max_km": 85
+    }
+  ],
+  "shops": [
+    {
+      "code": "BGR-PAJ",
+      "name": "Bogor Pajajaran Branch",
+      "city": "Bogor",
+      "address": "Jl. Raya Pajajaran No. 78, Baranangsiang, Kota Bogor",
+      "latitude": -6.6014,
+      "longitude": 106.8072,
+      "is_active": true
+    },
+    {
+      "code": "BKS-BRT",
+      "name": "Bekasi Barat Ahmad Yani",
+      "city": "Bekasi",
+      "address": "Jl. Jenderal Ahmad Yani No. 15, Bekasi Barat, Kota Bekasi",
+      "latitude": -6.2407,
+      "longitude": 106.9936,
+      "is_active": true
+    },
+    {
+      "code": "BKS-CKR",
+      "name": "Cikarang Lippo Branch",
+      "city": "Kab. Bekasi",
+      "address": "Jl. MH Thamrin Kav. 105, Lippo Cikarang, Kab. Bekasi",
+      "latitude": -6.3292,
+      "longitude": 107.1494,
+      "is_active": true
+    },
+    {
+      "code": "DPK-MRG",
+      "name": "Depok Margonda Branch",
+      "city": "Depok",
+      "address": "Jl. Margonda Raya No. 310, Kemiri Muka, Depok",
+      "latitude": -6.3916,
+      "longitude": 106.8286,
+      "is_active": true
+    },
+    {
+      "code": "JKT-CAW",
+      "name": "Cawang MT Haryono",
+      "city": "Jakarta Timur",
+      "address": "Jl. MT Haryono Kav. 12, Cawang, Jakarta Timur",
+      "latitude": -6.2442,
+      "longitude": 106.8686,
+      "is_active": true
+    },
+    {
+      "code": "JKT-CBB",
+      "name": "Cibubur Transyogi",
+      "city": "Jakarta Timur",
+      "address": "Jl. Alternatif Cibubur KM 3, Cibubur, Jakarta Timur",
+      "latitude": -6.3756,
+      "longitude": 106.9022,
+      "is_active": true
+    },
+    {
+      "code": "JKT-KBJ",
+      "name": "Kebon Jeruk Arteri",
+      "city": "Jakarta Barat",
+      "address": "Jl. Panjang Arteri Kelapa Dua No. 88, Kebon Jeruk, Jakarta Barat",
+      "latitude": -6.1924,
+      "longitude": 106.7691,
+      "is_active": true
+    },
+    {
+      "code": "JKT-KLG",
+      "name": "Kelapa Gading Boulevard",
+      "city": "Jakarta Utara",
+      "address": "Jl. Boulevard Barat Raya No. 45, Kelapa Gading, Jakarta Utara",
+      "latitude": -6.1574,
+      "longitude": 106.8906,
+      "is_active": true
+    },
+    {
+      "code": "JKT-PIN",
+      "name": "Pondok Indah Flagship",
+      "city": "Jakarta Selatan",
+      "address": "Jl. Sultan Iskandar Muda No. 29, Pondok Indah, Jakarta Selatan",
+      "latitude": -6.2655,
+      "longitude": 106.7831,
+      "is_active": true
+    },
+    {
+      "code": "JKT-SUN",
+      "name": "Sunter Auto Flagship",
+      "city": "Jakarta Utara",
+      "address": "Jl. Danau Sunter Selatan Blok O3 No. 5, Sunter Agung, Jakarta Utara",
+      "latitude": -6.1462,
+      "longitude": 106.8765,
+      "is_active": true
+    },
+    {
+      "code": "TNG-BSD",
+      "name": "Tangerang BSD City",
+      "city": "Tangerang Selatan",
+      "address": "Jl. Pahlawan Seribu Sektor VII, BSD City, Tangerang Selatan",
+      "latitude": -6.2886,
+      "longitude": 106.6636,
+      "is_active": true
+    },
+    {
+      "code": "TNG-KRW",
+      "name": "Karawaci Imam Bonjol",
+      "city": "Tangerang",
+      "address": "Jl. Imam Bonjol No. 62, Lippo Karawaci, Kota Tangerang",
+      "latitude": -6.2195,
+      "longitude": 106.6094,
+      "is_active": true
+    }
+  ],
+  "drivers": [
+    {
+      "employee_code": "DRV-001",
+      "full_name": "Budi Santoso",
+      "base_shop_code": "JKT-SUN",
+      "base_fixed_salary": "5500000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-002",
+      "full_name": "Agus Pratama",
+      "base_shop_code": "JKT-KLG",
+      "base_fixed_salary": "5400000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-003",
+      "full_name": "Hendra Wijaya",
+      "base_shop_code": "JKT-PIN",
+      "base_fixed_salary": "5600000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-004",
+      "full_name": "Dedi Kurniawan",
+      "base_shop_code": "JKT-CAW",
+      "base_fixed_salary": "5350000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-005",
+      "full_name": "Rizky Ramadhan",
+      "base_shop_code": "DPK-MRG",
+      "base_fixed_salary": "5250000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-006",
+      "full_name": "Andi Saputra",
+      "base_shop_code": "BGR-PAJ",
+      "base_fixed_salary": "5200000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-007",
+      "full_name": "Fajar Nugroho",
+      "base_shop_code": "BKS-BRT",
+      "base_fixed_salary": "5450000.00",
+      "is_active": true
+    },
+    {
+      "employee_code": "DRV-008",
+      "full_name": "Wahyu Hidayat",
+      "base_shop_code": "TNG-BSD",
+      "base_fixed_salary": "5500000.00",
+      "is_active": true
+    }
+  ],
+  "rate_cards": [
+    {
+      "name": "Standard Jabodetabek Rate 2026",
+      "effective_from": "2025-12-31T17:00:00.000Z",
+      "effective_to": null,
+      "min_km": "5.00",
+      "max_km": "999.99",
+      "base_fare": "35000.00",
+      "rate_per_km": "6000.00",
+      "flat_trip_allowance": "25000.00",
+      "toll_allowance": "45000.00",
+      "is_active": true
+    }
+  ],
+  "sample_route_comparisons": [
+    {
+      "origin_code": "JKT-PIN",
+      "origin_name": "Pondok Indah Flagship",
+      "destination_code": "BGR-PAJ",
+      "destination_name": "Bogor Pajajaran Branch",
+      "toll_distance_km": 46.96,
+      "toll_duration_min": 39.01,
+      "nontoll_distance_km": 46.96,
+      "nontoll_duration_min": 39,
+      "haversine_geodesic_km": 37.24
+    },
+    {
+      "origin_code": "JKT-PIN",
+      "origin_name": "Pondok Indah Flagship",
+      "destination_code": "BKS-BRT",
+      "destination_name": "Bekasi Barat Ahmad Yani",
+      "toll_distance_km": 32.07,
+      "toll_duration_min": 26.52,
+      "nontoll_distance_km": 32.84,
+      "nontoll_duration_min": 29.6,
+      "haversine_geodesic_km": 23.46
+    },
+    {
+      "origin_code": "JKT-PIN",
+      "origin_name": "Pondok Indah Flagship",
+      "destination_code": "TNG-KRW",
+      "destination_name": "Karawaci Imam Bonjol",
+      "toll_distance_km": 31.67,
+      "toll_duration_min": 26.65,
+      "nontoll_distance_km": 36.12,
+      "nontoll_duration_min": 31.16,
+      "haversine_geodesic_km": 19.88
+    },
+    {
+      "origin_code": "JKT-SUN",
+      "origin_name": "Sunter Auto Flagship",
+      "destination_code": "BGR-PAJ",
+      "destination_name": "Bogor Pajajaran Branch",
+      "toll_distance_km": 58.84,
+      "toll_duration_min": 49.46,
+      "nontoll_distance_km": 58.08,
+      "nontoll_duration_min": 50.89,
+      "haversine_geodesic_km": 50.92
+    },
+    {
+      "origin_code": "JKT-SUN",
+      "origin_name": "Sunter Auto Flagship",
+      "destination_code": "BKS-CKR",
+      "destination_name": "Cikarang Lippo Branch",
+      "toll_distance_km": 45.67,
+      "toll_duration_min": 40.91,
+      "nontoll_distance_km": 49.85,
+      "nontoll_duration_min": 44.27,
+      "haversine_geodesic_km": 36.35
+    },
+    {
+      "origin_code": "JKT-SUN",
+      "origin_name": "Sunter Auto Flagship",
+      "destination_code": "TNG-BSD",
+      "destination_name": "Tangerang BSD City",
+      "toll_distance_km": 39.2,
+      "toll_duration_min": 37.13,
+      "nontoll_distance_km": 47.17,
+      "nontoll_duration_min": 43.93,
+      "haversine_geodesic_km": 28.34
+    },
+    {
+      "origin_code": "JKT-SUN",
+      "origin_name": "Sunter Auto Flagship",
+      "destination_code": "DPK-MRG",
+      "destination_name": "Depok Margonda Branch",
+      "toll_distance_km": 35.03,
+      "toll_duration_min": 30.55,
+      "nontoll_distance_km": 35.03,
+      "nontoll_duration_min": 30.55,
+      "haversine_geodesic_km": 27.65
+    },
+    {
+      "origin_code": "JKT-SUN",
+      "origin_name": "Sunter Auto Flagship",
+      "destination_code": "JKT-KLG",
+      "destination_name": "Kelapa Gading Boulevard",
+      "toll_distance_km": 3.93,
+      "toll_duration_min": 5.19,
+      "nontoll_distance_km": 3.93,
+      "nontoll_duration_min": 5.19,
+      "haversine_geodesic_km": 1.99
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+services:
+  postgres:
+    image: imresamu/postgis:16-3.4-alpine
+    container_name: dealership-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-dealership_db}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "${POSTGRES_HOST_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-dealership_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  osrm-toll:
+    image: ghcr.io/project-osrm/osrm-backend:latest
+    container_name: dealership-osrm-toll
+    restart: unless-stopped
+    ports:
+      - "${OSRM_TOLL_HOST_PORT:-5050}:5000"
+    volumes:
+      - ./osrm-data/toll:/data:ro
+    command: osrm-routed --algorithm mld --port 5000 /data/jabodetabek.osrm
+
+  osrm-nontoll:
+    image: ghcr.io/project-osrm/osrm-backend:latest
+    container_name: dealership-osrm-nontoll
+    restart: unless-stopped
+    ports:
+      - "${OSRM_NONTOLL_HOST_PORT:-5001}:5001"
+    volumes:
+      - ./osrm-data/nontoll:/data:ro
+    command: osrm-routed --algorithm mld --port 5001 /data/jabodetabek.osrm
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: dealership-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      osrm-toll:
+        condition: service_started
+      osrm-nontoll:
+        condition: service_started
+    environment:
+      PORT: 3001
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-dealership_db}
+      OSRM_TOLL_URL: http://osrm-toll:5000
+      OSRM_NONTOLL_URL: http://osrm-nontoll:5001
+    ports:
+      - "${BACKEND_HOST_PORT:-3001}:3001"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: dealership-frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${FRONTEND_HOST_PORT:-5173}:5173"
+
+volumes:
+  postgres_data:

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    font-family: 'Inter Variable', Inter, system-ui, -apple-system, sans-serif;
+    min-height: 100dvh;
+    background-color: #020617;
+    color: #f8fafc;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Bundled Leaflet map styling */
+.leaflet-container {
+  font-family: 'Inter Variable', Inter, system-ui, sans-serif;
+  background-color: #0f172a;
+}
+
+.leaflet-div-icon-custom {
+  background: transparent;
+  border: none;
+}
